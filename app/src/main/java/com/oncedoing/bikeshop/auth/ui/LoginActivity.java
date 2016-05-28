@@ -47,8 +47,8 @@ public class LoginActivity extends BaseActivity{
 
     @OnClick(R.id.btn_login)
     public void onClickLogin(){
-         String username = "18640986081";//accountEdit.getText().toString();
-         String password = "123456";//passwordEdit.getText().toString()
+         String username = "";//accountEdit.getText().toString();
+         String password = "";//passwordEdit.getText().toString()
                 ;
         pDialog = new MaterialDialog.Builder(this)
                 .content("登陆中...")
