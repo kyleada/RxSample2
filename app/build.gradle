@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'me.tatarka.retrolambda'//加上这句加,入plugin声明
+
+Properties props = new Properties()
+props.load(new FileInputStream(file("../config/sign.properties")))
+props.load(new FileInputStream(file("../config/key.properties")))
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled false
+    }
+//    compileOptions {//使用JAVA8语法解析
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+    productFlavors {
+        xiaomi{}
+        baidu{}
+        wandoujia{}
+        qihu360{}
+        share{}
+        liuhengyu{}
+        origin{}
+        update{}
+        qq{}
+    }
+
+//    signingConfigs {
+//        release{
+////            keyAlias props['KEY_ALIAS']
+////            keyPassword props['KEY_PASSWORD']
+////            storeFile file(props['KEYSTORE_FILE'])
+////            storePassword props['KEYSTORE_PASSWORD']
+//        }
+//    }
+
+    buildTypes {
+        release {
+//            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+//                            &&'release'.equals(variant.buildType.name)) {
+//                        def apkFile = new File(
+//                                output.outputFile.getParent(),
+//                                "kkwang_${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk")
+//                        output.outputFile = apkFile
+//                    }
+//                }
+//            }
+
+            ndk {
+                abiFilters "armeabi"
+            }
+        }
+        debug {
+//            signingConfig signingConfigs.release
+            ndk {
+                abiFilters "armeabi"
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+    }
+}
+
+//retrolambda {//指定将源码编译的级别，使用下列代码，会将代码编译到兼容1.6的字节码格式
+//    javaVersion JavaVersion.VERSION_1_6
+//}
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta1' // or 1.4-beta1
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1' // or 1.4-beta1
+
+
+    compile project(':commonlib')
+//    compile project(':umengfamily')
+    compile project(':easyrecyclerview')
+    compile project(':multi-image-selector')
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["jsr250-api"]
+    compile rootProject.ext.dependencies["dagger"]
+    compile rootProject.ext.dependencies["timber"]
+    compile rootProject.ext.dependencies["swipebackhelper"]
+    compile rootProject.ext.dependencies["FlycoTabLayout_Lib"]
+    compile rootProject.ext.dependencies["DatePicker"]
+    compile rootProject.ext.dependencies["uCrop"]
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
+        transitive = true
+    }
+    compile 'com.bigkoo:snappingstepper:1.0.2'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.3'
+    compile 'im.fir:fir-sdk:latest.integration@aar'
+
+}

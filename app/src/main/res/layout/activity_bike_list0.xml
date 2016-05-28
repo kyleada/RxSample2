@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/view_toolbar" />-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <com.oncedoing.bikeshop.widget.CleanEditText
+            android:id="@+id/et_search"
+            style="@style/search_edit_style"
+            android:layout_below="@+id/app_bar_layout"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:hint="关键词用空格间隔"
+            android:inputType="textEmailAddress" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_filter_chosen"
+            android:layout_below="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone"
+            app:layout_scrollFlags="scroll|enterAlways"></android.support.v7.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/tv_storage_count"
+                style="@style/primary_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="库存总量 0 件" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_arrow_drop_down" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_temp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                style="@style/primary_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息消息" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_bikelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_filter_chosen"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_empty="@layout/view_empty"
+        app:layout_progress="@layout/view_progress"
+        app:recyclerPaddingLeft="8dp"
+        app:recyclerPaddingRight="8dp"
+        app:scrollbarStyle="insideOverlay" />
+
+    <include layout="@layout/view_status_bar"></include>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+</android.support.design.widget.CoordinatorLayout>

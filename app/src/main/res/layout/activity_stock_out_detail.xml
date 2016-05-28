@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manage_bike.activity.StockInListActivity">
+
+    <include layout="@layout/view_toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tv_customer_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="令狐冲" />
+
+        <com.oncedoing.bikeshop.widget.LabelView
+            android:id="@+id/tv_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="2345"
+            app:leftText="成本       "
+            app:leftTextAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <com.oncedoing.bikeshop.widget.LabelView
+            android:id="@+id/tv_turnover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="2345"
+            app:leftText="销售额   "
+            app:leftTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+        </com.oncedoing.bikeshop.widget.LabelView>
+
+        <com.oncedoing.bikeshop.widget.LabelView
+            android:id="@+id/tv_profit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="10%"
+            app:leftText="毛利润   "
+            app:leftTextAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <com.oncedoing.bikeshop.widget.LabelView
+            android:id="@+id/tv_stock_out_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="2015-10-12"
+            app:leftText="时间       "
+            app:leftTextAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:text="购买列表" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

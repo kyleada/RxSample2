@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="七日"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_weekMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_t1"
+            android:paddingLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="￥3,1630.00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_m1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_weekMoney"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="毛利率"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_week_grossprofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_weekMoney"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_m1"
+            android:gravity="center"
+            android:text="+10%"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="本月"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_monthMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_t2"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:gravity="center"
+            android:text="￥3,1630.00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_monthMoney"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="毛利率"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_month_grossprofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_monthMoney"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_m2"
+            android:gravity="center"
+            android:text="+10%"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="今年"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_yearMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_t3"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:gravity="center"
+            android:text="￥3,1630.00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_m3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_yearMoney"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="毛利率"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_year_grossprofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_yearMoney"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tv_m3"
+            android:gravity="center"
+            android:text="+10%"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

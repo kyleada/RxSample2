@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="manage_items">
+        <item>新增商品</item>
+        <item>新增销售</item>
+        <item>新增客户</item>
+        <item>商品入库</item>
+        <item>商品查询</item>
+        <item>销售查询</item>
+        <item>客户查询</item>
+        <item>财务管理</item>
+        <item>经营分析</item>
+        <item></item>
+        <item></item>
+        <item></item>
+
+    </string-array>
+
+    <string-array name="items_bike_brands">
+        <item>崔克</item>
+        <item>崔克1</item>
+        <item>千里达</item>
+        <item>建大</item>
+
+    </string-array>
+
+    <string-array name="items_filter_period">
+        <item>全部</item>
+        <item>今天</item>
+        <item>本周</item>
+        <item>本月</item>
+    </string-array>
+
+
+    <string-array name="product_top_category">
+        <item>@string/whole_bike</item>
+        <item>@string/parts</item>
+        <item>@string/equipment</item>
+        <item>@string/others</item>
+        <item>@string/no_store</item>
+
+    </string-array>
+
+    <string-array name="items_gender">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+
+</resources>

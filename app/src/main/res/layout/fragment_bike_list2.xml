@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manage_bike.activity.ProductEditActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="3dp">
+
+        <!--<include layout="@layout/view_status_bar"></include>-->
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8"
+                app:layout_scrollFlags="scroll|snap|enterAlways|enterAlwaysCollapsed">
+
+                <com.oncedoing.bikeshop.widget.CleanEditText
+                    android:id="@+id/et_search"
+                    style="@style/search_edit_style"
+                    android:hint="@string/bike_query_hint"
+                    android:inputType="textEmailAddress" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_filter_chosen"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/et_search"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.jude.easyrecyclerview.swipe.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_bikelist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:clickable="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+           />
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/view_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/view_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+
+        <include
+            android:id="@+id/error"
+            layout="@layout/view_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/empty"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clickable="true"-->
+            <!--/>-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/progress"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clickable="true"-->
+            <!--/>-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/error"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clickable="true"-->
+            <!--/>-->
+
+    </com.jude.easyrecyclerview.swipe.SwipeRefreshLayout>
+
+
+    <!--<com.jude.easyrecyclerview.EasyRecyclerView-->
+        <!--android:id="@+id/rv_bikelist"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--app:layout_empty="@layout/view_empty"-->
+        <!--app:layout_progress="@layout/view_progress"-->
+        <!--app:recyclerPaddingLeft="8dp"-->
+        <!--app:recyclerPaddingRight="8dp"-->
+        <!--app:scrollbarStyle="insideOverlay"-->
+ <!--/>-->
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+       <!--&gt;-->
+
+
+        <!---->
+
+
+    <!--</RelativeLayout>-->
+</android.support.design.widget.CoordinatorLayout>

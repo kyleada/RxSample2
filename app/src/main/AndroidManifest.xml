@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.oncedoing.bikeshop">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- 从sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".BikeShopApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:value="acb55a7977aacd22a41b7ec63f81663a" android:name="BUG_HD_SDK_GENERAL_KEY" />
+
+        <activity android:name=".auth.ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".manage_bike.activity.ProductListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".manage_bike.activity.BikeListActivityOnlyFragmentTest"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".manage_customer.CustomerEditActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity android:name=".manage_customer.CustomerQueryActivity"/>
+        <activity
+            android:name=".manage_bike.activity.ProductEditActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity
+            android:name=".manage_bike.activity.SaleAddActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity
+            android:name=".manage_bike.activity.StockInListActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity
+            android:name=".manage_bike.activity.StockOutListActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity
+            android:name=".manage_bike.activity.StockOutDetailActivity"
+            android:theme="@style/AppTheme.SwipeBack"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".manage_bike.activity.AnalysisActivity">
+        </activity>
+    </application>
+
+</manifest>

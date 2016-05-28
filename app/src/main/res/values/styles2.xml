@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<resources>
+
+    <!-- Base application theme. -->
+
+
+
+    <!-- -<style parent="Theme.AppCompat.Light.DarkActionBar" name="AppTheme">-->
+
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+
+
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+
+    <!--<item name="android:actionMenuTextColor">@android:color/holo_blue_light</item>-->
+
+<!--</style>-->
+
+
+    <!-- -<style name="AppTheme.NoActionBar">-->
+
+    <!--<item name="windowActionBar">false</item>-->
+
+    <!--<item name="windowNoTitle">true</item>-->
+
+<!--</style>-->
+
+    <!--<style parent="ThemeOverlay.AppCompat.Dark.ActionBar" name="AppTheme.AppBarOverlay"/>-->
+
+    <!--<style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>-->
+
+
+    <!-- -<style parent="AppTheme.PopupOverlay" name="AppTheme.PopupOverlay.Spinner">-->
+
+    <!--<item name="android:spinnerDropDownItemStyle">@style/SpinnerItem</item>-->
+
+<!--</style>-->
+
+
+    <!--<style parent="Base.Widget.AppCompat.TextView.SpinnerItem" name="SpinnerItem">-->
+
+    <!--<item name="android:textColor">@android:color/background_dark</item>-->
+
+    <!--<item name="android:textSize">20sp</item>-->
+
+<!--</style>-->
+
+   <!---->
+
+
+ <!---->
+
+
+    <!--<style parent="AppTheme.PopupOverlay.Spinner" name="MySpinnerTheme">-->
+
+    <!--<item name="android:padding">8dp</item>-->
+
+<!--</style>-->
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_general_name"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginRight="16dp"
+        android:text="万思万思万思万思万思"/>
+
+    <TextView
+        android:id="@+id/tv_general_color"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_below="@+id/tv_general_name"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="黑色"/>
+
+    <TextView
+        android:id="@+id/tv_general_price"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_below="@+id/tv_general_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="89789"/>
+
+</RelativeLayout>

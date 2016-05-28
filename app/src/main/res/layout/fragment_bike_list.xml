@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".manage_bike.activity.ProductListActivity">
+
+
+    <com.oncedoing.bikeshop.widget.CleanEditText
+        android:id="@+id/et_search"
+        style="@style/search_edit_style"
+        android:hint="关键词用空格间隔"
+        android:inputType="textEmailAddress" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_filter_chosen"
+        android:layout_below="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_search_wrapper"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="10dip"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:background="@drawable/select_frame_bg">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/select"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dip"-->
+            <!--android:layout_marginRight="10dip"-->
+            <!--android:src="@drawable/ic_search"/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_delete_search"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="10dip"-->
+            <!--android:background="@drawable/emotionstore_progresscancelbtn"/>-->
+        <!--<EditText-->
+            <!--android:id="@+id/et_search"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:textSize="14sp"-->
+            <!--android:background="@null"-->
+            <!--android:layout_toLeftOf="@id/iv_delete_search"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:singleLine="true"-->
+            <!--android:layout_marginLeft="10dip"-->
+            <!--android:hint="关键词用空格分隔"-->
+            <!--android:layout_toRightOf="@id/select"/>-->
+    <!--</RelativeLayout>-->
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/rv_bikelist"
+        android:layout_below="@+id/rv_filter_chosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scrollbarStyle="insideOverlay"
+        app:layout_empty="@layout/view_empty"
+        app:layout_progress="@layout/view_progress"
+        app:recyclerPaddingRight="8dp"
+        app:recyclerPaddingLeft="8dp"
+        />
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_bottombar_wrapper"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_sellout"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:text="销售"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_buyin"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:text="入库"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_delete"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:text="删除"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_above="@+id/ll_bottombar_wrapper"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@drawable/shape_horizontal_list_divider"></View>-->
+
+</RelativeLayout>

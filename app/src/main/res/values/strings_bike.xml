@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="whole_bike">整车</string>
+    <string name="equipment">装备</string>
+    <string name="parts">配件</string>
+    <string name="wear">穿戴</string>
+    <string name="others">其他</string>
+    <string name="no_store">库存少于0</string>
+
+    <string name="bike_query_hint">关键字用空格间隔</string>
+    <string name="bike_storage_count">库存 : %1$s 件</string>
+    <string name="commodity_add_total_count">%1$s 件商品</string>
+    <string name="commodity_total_money">总价钱: %1$s </string>
+    <string name="stockout_list">销售记录 </string>
+    <string name="stockout_turnover"> </string>
+
+</resources>

@@ -1,0 +1,43 @@
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+ext {
+
+    android = [compileSdkVersion: 23,
+               buildToolsVersion: "23.0.2",
+               applicationId    : "me.kkwang.bikeshop",
+               minSdkVersion    : 17,
+               targetSdkVersion : 22,
+               versionCode      : 69,
+               versionName      : "0.0.7"]
+
+    dependencies = ["appcompat-v7"        : "com.android.support:appcompat-v7:23.2.1",
+                    "design"              : "com.android.support:design:23.2.1",
+                    "recyclerview-v7"     : "com.android.support:recyclerview-v7:23.2.1",
+                    "FlycoTabLayout_Lib"  : "com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar",
+                    "swipebackhelper"     : "com.jude:swipebackhelper:2.1.5",
+                    "DatePicker"          : "cn.aigestudio.datepicker:DatePicker:2.2.0",
+                    "jsr250-api"          : "javax.annotation:jsr250-api:1.0",
+                    "dagger"              : "com.google.dagger:dagger:2.0",
+                    "DatePicker"          : "cn.aigestudio.datepicker:DatePicker:2.2.0",
+                    "timber"              : "com.jakewharton.timber:timber:4.1.1",
+                    "nineoldandroids"     : "com.nineoldandroids:library:2.4.0",
+                    "retrofit2"           : "com.squareup.retrofit2:retrofit:2.0.0-beta4",
+                    "rxandroid"           : "io.reactivex:rxandroid:1.0.0",
+                    "okhttp3"             : "com.squareup.okhttp3:okhttp:3.2.0",
+                    "butterknife"         : "com.jakewharton:butterknife:7.0.1",
+                    "glide"               : "com.github.bumptech.glide:glide:3.7.0",
+                    "uCrop"               : "com.yalantis:ucrop:1.3.+"]
+
+
+
+    test = [
+            junit: "junit:junit:4.12"
+    ]
+}
